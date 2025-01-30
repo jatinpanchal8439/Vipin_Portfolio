@@ -1,0 +1,505 @@
+/* Mini Tools Styles */
+.mini-tools {
+    padding: 100px 20px;
+    background-color: var(--bg-color);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.tool-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tool-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Color Palette Generator */
+.color-palette {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+.tool-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tool-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tool-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tool-button.secondary {
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.color-presets {
+    margin-top: 20px;
+}
+
+.color-presets h4 {
+    margin-bottom: 10px;
+}
+
+.preset-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.preset-buttons button {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preset-buttons button:hover {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+/* Room Calculator */
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.results p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Furniture Planner */
+.furniture-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dimensions-input {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.items-list {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.furniture-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.furniture-item button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4444;
+    color: white;
+    cursor: pointer;
+}
+
+/* Budget Calculator */
+.budget-calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.budget-categories {
+    display: grid;
+    gap: 15px;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category input {
+    width: 120px;
+}
+
+.budget-chart {
+    height: 200px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-top: 20px;
+}
+
+.budget-summary {
+    text-align: right;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .color-palette {
+        justify-content: center;
+    }
+
+    .tool-controls {
+        flex-direction: column;
+    }
+
+    .preset-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-card {
+        padding: 20px;
+    }
+
+    .color-box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dimensions-input {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mini Tools Styles */
+.mini-tools-section {
+    padding: 120px 0 80px;
+    background-color: var(--bg-color);
+}
+
+.mini-tools-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.tools-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.tool-container {
+    background: var(--bg-color);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tool-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* Color Palette Styles */
+.color-palette {
+    text-align: center;
+}
+
+.color-scheme {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.color-box:hover {
+    transform: translateY(-5px);
+}
+
+.color-code {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.generate-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.generate-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.palette-presets {
+    margin-top: 30px;
+}
+
+.preset-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.preset-buttons button {
+    padding: 8px 20px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preset-buttons button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Furniture Planner Styles */
+.furniture-calculator {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.furniture-list {
+    margin-top: 20px;
+}
+
+.furniture-item {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.add-furniture-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.space-meter, .budget-meter {
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    height: 100%;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+/* Budget Calculator Styles */
+.budget-calculator {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.expense-categories {
+    margin-top: 20px;
+}
+
+.category-item {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.add-category-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.budget-summary {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .tool-container {
+    background: #2d2d2d;
+}
+
+body.dark-mode .furniture-item,
+body.dark-mode .category-item,
+body.dark-mode .budget-summary {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .input-group input {
+    background-color: #333;
+    border-color: #444;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mini-tools-section {
+        padding: 100px 0 60px;
+    }
+
+    .color-scheme {
+        gap: 15px;
+    }
+
+    .color-box {
+        width: 100px;
+        height: 100px;
+    }
+
+    .furniture-calculator,
+    .budget-calculator {
+        grid-template-columns: 1fr;
+    }
+}

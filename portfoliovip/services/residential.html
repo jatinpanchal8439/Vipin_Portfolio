@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Design - Interior Designer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <style>
+        .service-detail {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .service-icon-large {
+            font-size: 4rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .service-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 1.5rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .process-steps {
+            margin: 4rem 0;
+        }
+        
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .step-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            background: #ff6b6b20;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #ff6b6b;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .step-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-brand">Interior Designer</a>
+        <button class="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+            <li><a href="../index.html#home"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="../index.html#about"><i class="fas fa-user"></i>About</a></li>
+            <li><a href="../index.html#projects"><i class="fas fa-project-diagram"></i>Projects</a></li>
+            <li><a href="../index.html#services"><i class="fas fa-cog"></i>Services</a></li>
+            <li><a href="../index.html#skills"><i class="fas fa-chart-line"></i>Skills</a></li>
+            <li><a href="../index.html#tools"><i class="fas fa-toolbox"></i>Tools</a></li>
+            <li><a href="../index.html#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            <li>
+                <button id="dark-mode-toggle" class="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="service-detail">
+        <a href="../index.html#services" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Services
+        </a>
+        
+        <div class="service-header">
+            <i class="fas fa-home service-icon-large"></i>
+            <h1 class="section-title">Residential Design</h1>
+            <p>Transform your living spaces with our expert residential interior design services</p>
+        </div>
+        
+        <div class="service-gallery">
+            <div class="gallery-item">
+                <img src="../images/residential-1.jpg" alt="Modern Living Room">
+                <div class="gallery-overlay">
+                    <h3>Modern Living Room</h3>
+                    <p>Contemporary design with comfort in mind</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/residential-2.jpg" alt="Luxurious Bedroom">
+                <div class="gallery-overlay">
+                    <h3>Luxurious Bedroom</h3>
+                    <p>Elegant and peaceful sleeping spaces</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/residential-3.jpg" alt="Designer Kitchen">
+                <div class="gallery-overlay">
+                    <h3>Designer Kitchen</h3>
+                    <p>Functional and beautiful cooking spaces</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-steps">
+            <h2>Our Design Process</h2>
+            <div class="step-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Initial Consultation</h3>
+                    <p>We meet to discuss your vision, needs, and budget for the space. This helps us understand your style preferences and lifestyle requirements.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Space Planning</h3>
+                    <p>Our team creates detailed floor plans and 3D visualizations to optimize your space for both functionality and aesthetics.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Design Development</h3>
+                    <p>We select materials, colors, furniture, and accessories that align with your style and create a cohesive design concept.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Implementation</h3>
+                    <p>Our team manages the entire implementation process, from ordering materials to coordinating with contractors and installers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/dark-mode.js"></script>
+</body>
+</html>
